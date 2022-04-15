@@ -1,23 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
+//import logo from "./logo.svg"; <img src={logo} className="App-logo" alt="logo" />
+import React from "react";
+import Forecast from "./Forecast";
+import "./css/styles.css";
+import Head from "./Head";
+import Search from "./Search";
+import Footer from "./Footer";
+//import "./skyNew.jpeg";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hi it's Heidi from React app</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Head />
+      <div className="container">
+        <Search />
+        <Forecast />
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;

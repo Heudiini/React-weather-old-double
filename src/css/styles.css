@@ -1,0 +1,158 @@
+/*.App {
+ 
+}*/
+
+* {
+  margin: 0;
+  padding: 20px auto;
+}
+
+body {
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+}
+
+/*@keyframes slideleft {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 90000%;
+  }
+}
+
+@-webkit-keyframes slideleft {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 90000%;
+  }
+}
+.shecodes-logo {
+  width: 70px;
+  height: 20px;
+}
+
+#masthead {
+  background-image: url("./skyNew.JPG");
+  background-repeat: repeat-x;
+  animation: slideleft 50000s infinite linear;
+  -webkit-animation: slideleft 50000s infinite linear;
+  background: cover;
+  width: 100%;
+  height: 1400px;
+}
+/*
+#loader {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: 0;
+}*/
+.reset {
+  position: fixed;
+  color: grey;
+  top: 10px;
+  right: 75px;
+  z-index: 10;
+  width: 13px;
+  height: 17px;
+  line-height: 5px;
+  border-style: none;
+  background-color: white;
+}
+.titleh1 {
+  font-family: "Caveat", "Ooh Baby", cursive;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+    */
+
+  padding-top: 30px;
+  padding-left: 20px;
+  font-size: 3rem;
+  color: rgb(80, 77, 77);
+  text-decoration: underline 3px rgb(90, 89, 89);
+}
+#locationBtn {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(182, 213, 248);
+  font-size: small;
+  width: 50px;
+  color: aliceblue;
+  border-style: none;
+  box-shadow: 5px 5px 5px rgba(20, 3, 24, 0.5);
+}
+#locationBtn:hover {
+  background-color: rgb(148, 246, 250);
+  transition: all 200ms ease-in-out;
+}
+.titleh2 {
+  text-align: right;
+  font-family: "Caveat", "Ooh Baby", cursive;
+  font-size: xx-large;
+  text-align: right;
+  padding-right: 50px;
+  padding-bottom: 5px;
+  color: black;
+  line-height: 27px;
+  /*font-style: italic;*/
+}
+.searchBox {
+  border-style: none;
+  position: fixed;
+  right: 60px;
+  top: 5px;
+  z-index: 3;
+  background-color: white;
+  padding: 5px;
+  color: grey;
+  font-style: italic;
+  font-size: smaller;
+}
+.searchBox-submit {
+  border-style: none;
+  position: fixed;
+  top: 4px;
+  right: 5px;
+  background-color: cornflowerblue;
+  z-index: 3;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+.card.currentBody {
+  background-color: transparent;
+  border-style: none;
+}
+
+.col.townTitle {
+  font-family: "Caveat", "Ooh Baby", cursive;
+  align-items: flex-start;
+  font-size: 2rem;
+  max-width: 300px;
+  color: white;
+  text-shadow: 0 3px 13px rgba(20, 3, 24, 0.7);
+  line-height: 35px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.footer a {
+  color: grey;
+  text-decoration: none;
+  font-size: 10px;
+}
+.footer a:hover {
+  color: hotpink;
+}

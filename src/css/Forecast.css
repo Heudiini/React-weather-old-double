@@ -1,0 +1,120 @@
+/*////////////////current area/////////////////////*/
+.current {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.today-area {
+  padding-left: 20px;
+  border-radius: 15px;
+  background-color: rgba(182, 213, 248, 0.7);
+  /*background-color: rgba(169, 177, 197, 0.7);*/
+  box-shadow: 5px 5px 5px rgba(20, 3, 24, 0.5);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-temperature a {
+  font-size: large;
+  color: black;
+}
+
+.weather-temperature .active {
+  color: #ec6e4c;
+  pointer-events: none;
+}
+.weather-temperature .active:hover {
+  color: #ec6e4c;
+  cursor: none;
+}
+
+#current-time {
+  color: black;
+  padding-top: 20px;
+  padding-left: 5px;
+}
+.current-area {
+  text-align: center;
+}
+#temperature {
+  color: #ec6e4c;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.current-gif {
+  width: 90px;
+  height: 55px;
+  padding-left: 30px;
+}
+/*//////////////tonight/////////////////////////////*/
+
+.tonight-temp {
+  text-align: center;
+  color: cornflowerblue;
+  font-size: 2rem;
+  font-style: oblique;
+}
+.tonight-title {
+  color: cornflowerblue;
+  padding-left: 5px;
+  font-style: oblique;
+}
+.tonight-conditions {
+  color: black;
+  padding-left: 20px;
+  font-style: italic;
+  font-size: smaller;
+}
+/*/ ///////////////////////////forecast area styling*/
+
+.card {
+  padding-left: 0px;
+  display: flex;
+  margin: 10px;
+  border-style: none;
+  background: none;
+  border-radius: 15px;
+}
+.card-title {
+  padding-left: 20px;
+  text-align: left;
+  font-size: large;
+
+  font-family: "Caveat", "Ooh Baby", cursive;
+}
+.card-body {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  border-radius: 15px;
+  background-color: rgba(182, 213, 248, 0.7);
+  /* background-color: rgba(169, 177, 197, 0.7);*/
+  box-shadow: 5px 5px 5px rgba(20, 3, 24, 0.5);
+}
+.describe-forecast,
+.card-text,
+p {
+  font-family: "Caveat", "Ooh Baby";
+  color: rgb(71, 70, 70);
+  /*rgb(43, 42, 42);*/
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: capitalize;
+  font-size: normal;
+}
+img {
+  width: 60px;
+  height: 55px;
+  margin: 2px;
+}
+
+.forecast {
+  background: none;
+}
