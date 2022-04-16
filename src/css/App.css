@@ -53,9 +53,8 @@ body {
   margin-bottom: 5px;
 }
 .footer a {
-  color: grey;
+  color: rgb(117, 221, 247);
   text-decoration: none;
-  font-size: 10px;
 }
 .footer a:hover {
   color: hotpink;
