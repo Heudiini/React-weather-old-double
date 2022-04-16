@@ -1,13 +1,16 @@
-/*.App {
- 
-}*/
-
 .App {
-  text-align: center;
+  margin: auto;
   color: #61dafb;
+  max-width: 40rem;
+
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid aqua;
+  padding: 20px;
 }
 
 body {
+  padding: 5%;
   background: radial-gradient(
     circle at -8.9% 51.2%,
     rgb(9, 9, 9) 20%,
@@ -65,7 +68,7 @@ body {
 }
 
 .logo {
-  height: 60px;
+  height: 50px;
   pointer-events: none;
 }
 @keyframes logo-spin {

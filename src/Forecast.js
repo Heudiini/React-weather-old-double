@@ -9,7 +9,7 @@ export default function SearchEngine() {
 
   function showTemp(response) {
     setResult(true);
-    console.log(response.data);
+    console.log(response.data.coord);
     setWeather({
       city: response.data.name,
       country: response.data.sys.country,
@@ -19,7 +19,7 @@ export default function SearchEngine() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       sunrise: response.data.sunrise,
-
+      coord: response.data.coord,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
 
       description: response.data.weather[0].description,
