@@ -1,63 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./css/Forecast.css";
 
-export default function Forecast() {
-  let weatherData = {
-    city: "London",
-    day: "Friday",
-    temperature: "12",
-  };
-  return (
-    <div>
-      <div className="row">
-        <div className="col-sm-6 current">
-          <div className="card sm-6 currentBody">
-            <div className="col townTitle" id="theTown">
-              <h2>{weatherData.city} </h2>
-            </div>
+export default function SearchEngine() {
+  const [city, setCity] = useState("");
+  const [result, setResult] = useState(false);
+  const [weather, setWeather] = useState({});
 
-            <div className="today-area">
-              <h5 id="current-time">{weatherData.day} 21:00</h5>
-              <p>
-                <span id="description"></span> Lovely day with light showers
-                <br />
-                <span>Feels like: </span>
-                <span id="feels-like">30</span>
-                <span>°</span>
-              </p>
-              <span className="current-area">
-                <div className="clearfix weather-temperature">
-                  <span className="temperature" id="temperature">
-                    {weatherData.temperature}
-                  </span>
-                  <span className="units">
-                    <a href="#" id=" cel" className="active">
-                      °C
-                    </a>{" "}
-                    |
-                    <a href="#" id="fah">
-                      °F
-                    </a>
-                  </span>
+  function showTemp(response) {
+    setResult(true);
+    console.log(response.data);
+    setWeather({
+      city: response.data.name,
+      country: response.data.sys.country,
+      weather: response.data,
+      visibility: response.data.main.visibility,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      sunrise: response.data.sunrise,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description: response.data.weather[0].description,
+    });
+  }
 
-                  <div className="icon">
-                    <img src="https://www.wunderground.com/static/i/c/v4/30.svg" alt="raining" />
-                  </div>
-                </div>
-                <p>
-                  <span>Humidity: </span>
-                  <span className="humidity">60</span>
-                  <span> %</span>
-                  <br />
-                  <span>Wind: </span>
-                  <span className="wind">6</span>
-                  <span> m/s</span>
-                </p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  function handleSubmit(event) {
+    event.preventDefault();
+    let apiKey = `cf35cd803ef0202f5f034abcff722764`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(showTemp);
+    console.log(url);
+  }
+
+  function changeCity(event) {
+    setCity(event.target.value);
+    //console.log(event.target.value)
+  }
+  let form = (
+    <form onSubmit={handleSubmit}>
+      <input type="search" placeholder="Type a city" onChange={changeCity} />
+      <input type="submit" value="Search" />
+    </form>
   );
+
+  if (result) {
+    return (
+      <div class="container">
+        {form}
+        <h3>
+          {weather.city},{weather.country}{" "}
+        </h3>
+        <ul>
+          <li>
+            <h4>Temperature: {Math.round(weather.temperature)}°C</h4>
+          </li>
+          <li>Description: {weather.description}</li>
+          <li>Humidity: {weather.humidity}%</li>
+          <li>Wind: {weather.wind}km/h</li>
+
+          <li>
+            <img src={weather.icon} alt={weather.description} />
+          </li>
+        </ul>
+      </div>
+    );
+  } else {
+    return form;
+  }
 }

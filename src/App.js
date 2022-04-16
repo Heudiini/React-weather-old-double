@@ -1,18 +1,19 @@
 //import logo from "./logo.svg"; <img src={logo} className="App-logo" alt="logo" />
 import React from "react";
 import Forecast from "./Forecast";
-import "./css/styles.css";
+import "./css/App.css";
 import Head from "./Head";
-import Search from "./Search";
+import Title from "./Title";
 import Footer from "./Footer";
-//import "./skyNew.jpeg";
+import "./logo.svg";
 
 export default function App() {
   return (
     <div className="App">
       <Head />
       <div className="container">
-        <Search />
+        <Title />
+        <logo />
         <Forecast />
         <Footer />
       </div>
