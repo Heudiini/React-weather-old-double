@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <small>
-        © 2022 <a href="https://react-weather-heudiini.netlify.app/"> opensource code </a>
+        © 2022 <a href="https://github.com/Heudiini/React-weather"> opensource code </a>
         by Heudiini
       </small>
     </footer>
