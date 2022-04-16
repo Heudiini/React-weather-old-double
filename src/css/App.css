@@ -4,25 +4,18 @@
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 30px;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  color: #61dafb;
 }
 
 body {
-  background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    rgb(9, 9, 9) 20%,
+    rgb(0, 183, 255) 15.9%,
+    rgb(77, 136, 255) 15.9%,
+    rgb(248, 188, 68) 24.4%,
+    rgb(57, 83, 99) 24.5%,
+    rgb(4, 7, 9) 66%
   );
 }
 
@@ -35,8 +28,8 @@ body {
   padding: 30px 20px 30px 20px;
 
   font-size: 3rem;
-  color: rgb(80, 77, 77);
-  text-decoration: underline 3px rgb(90, 89, 89);
+  color: #e8b755;
+  /*text-decoration: underline 3px rgb(90, 89, 89);*/
 }
 /*
 #locationBtn {
@@ -72,11 +65,21 @@ body {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.logo {
+  height: 60px;
+  pointer-events: none;
+}
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
   }
 }

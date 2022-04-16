@@ -45,10 +45,10 @@ export default function SearchEngine() {
 
   if (result) {
     return (
-      <div class="container">
+      <div className="container">
         {form}
         <h3>
-          {weather.city},{weather.country}{" "}
+          {weather.city}, {weather.country}{" "}
         </h3>
         <ul>
           <li>

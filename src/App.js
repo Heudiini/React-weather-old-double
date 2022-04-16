@@ -5,7 +5,6 @@ import "./css/App.css";
 import Head from "./Head";
 import Title from "./Title";
 import Footer from "./Footer";
-import "./logo.svg";
 
 export default function App() {
   return (
@@ -13,7 +12,7 @@ export default function App() {
       <Head />
       <div className="container">
         <Title />
-        <logo />
+
         <Forecast />
         <Footer />
       </div>
