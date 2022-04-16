@@ -19,7 +19,9 @@ export default function SearchEngine() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       sunrise: response.data.sunrise,
+
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+
       description: response.data.weather[0].description,
     });
   }
@@ -47,13 +49,13 @@ export default function SearchEngine() {
     return (
       <div className="container">
         {form}
+
         <h3>
           {weather.city}, {weather.country}{" "}
         </h3>
         <ul>
-          <li>
-            <h4>Temperature: {Math.round(weather.temperature)}°C</h4>
-          </li>
+          <li>Temperature: {Math.round(weather.temperature)}°C</li>
+
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>
           <li>Wind: {weather.wind}km/h</li>
