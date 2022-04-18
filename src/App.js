@@ -2,6 +2,7 @@
 import React from "react";
 import Forecast from "./Forecast";
 import "./css/App.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 import Title from "./Title";
 import Footer from "./Footer";
