@@ -28,7 +28,7 @@ body {
     "Open Sans", "Helvetica Neue", sans-serif;
     */
 
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
 
   font-size: 3rem;
   color: #e8b755;
@@ -70,43 +70,13 @@ body {
 .logo {
   height: 50px;
   pointer-events: none;
-
-  -webkit-animation: logo-spin infinite 20s linear;
-  -moz-animation: moz-spin infinite 20s linear;
-  -o-animation: o-spin infinite 20s linear;
-  animation: rotation infinite 20s linear;
 }
-@keyframes rotation {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes moz-spin {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(360deg);
-  }
-}
-@keyframes o-spin {
-  from {
-    -o-transform: rotate(0deg);
-  }
-  to {
-    -o-transform: rotate(360deg);
   }
 }
 
