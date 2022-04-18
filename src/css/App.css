@@ -70,13 +70,43 @@ body {
 .logo {
   height: 50px;
   pointer-events: none;
+
+  -webkit-animation: logo-spin infinite 20s linear;
+  -moz-animation: moz-spin infinite 20s linear;
+  -o-animation: o-spin infinite 20s linear;
+  animation: rotation infinite 20s linear;
 }
-@keyframes logo-spin {
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes moz-spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes o-spin {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
   }
 }
 
