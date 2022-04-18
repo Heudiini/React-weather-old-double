@@ -1,5 +1,5 @@
 .container {
-  height: 450px;
+  min-height: 500px;
 }
 
 .container ul {
