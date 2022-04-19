@@ -1,6 +1,6 @@
 //import logo from "./logo.svg"; <img src={logo} className="App-logo" alt="logo" />
 import React from "react";
-import Forecast from "./Forecast";
+import Weather from "./Weather";
 import "./css/App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -13,7 +13,7 @@ export default function App() {
       <div className="container">
         <Title />
 
-        <Forecast />
+        <Weather />
       </div>{" "}
       <Footer />
     </div>

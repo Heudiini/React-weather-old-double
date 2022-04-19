@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./css/Forecast.css";
+import "./css/Weather.css";
 
 export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [result, setResult] = useState(false);
-  const [weather, setWeather] = useState({});
+  const [weatherData, setWeatherData] = useState({});
 
   function showTemp(response) {
+    console.log(response.data);
     setResult(true);
-    console.log(response.data.coord);
-    setWeather({
+
+    setWeatherData({
       city: response.data.name,
       country: response.data.sys.country,
       weather: response.data,
@@ -50,16 +51,16 @@ export default function SearchEngine() {
       <div className="forecast ">
         {form}
 
-        <h3>
-          {weather.city}, {weather.country}{" "}
+        <h3 className="text-capitalize">
+          {weatherData.city}, {weatherData.country}{" "}
         </h3>
         <ul>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {Math.round(weather.wind)}km/h</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
+          <li>Temperature: {Math.round(weatherData.temperature)}°C</li>
+          <li>Description: {weatherData.description}</li>
+          <li>Humidity: {weatherData.humidity}%</li>
+          <li>Wind: {Math.round(weatherData.wind)}km/h</li>
+          <li className="text-capitalize ">
+            <img src={weatherData.icon} alt={weatherData.description} />
           </li>
         </ul>
       </div>
