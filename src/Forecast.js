@@ -28,8 +28,8 @@ export default function SearchEngine() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = `cf35cd803ef0202f5f034abcff722764`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiKey = `cf35cd803ef0202f5f034abcff722764`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(showTemp);
     console.log(url);
   }
@@ -40,8 +40,8 @@ export default function SearchEngine() {
   }
   let form = (
     <form onSubmit={handleSubmit}>
-      <input type="search" placeholder="Type a city" onChange={changeCity} />
-      <input type="submit" value="Search" />
+      <input type="search" placeholder="Type a city" onChange={changeCity} className="searchBox" />
+      <input type="submit" value="🔍" autoFocus="on" className="btnSubmit" />
     </form>
   );
 
@@ -57,7 +57,7 @@ export default function SearchEngine() {
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
+          <li>Wind: {Math.round(weather.wind)}km/h</li>
           <li>
             <img src={weather.icon} alt={weather.description} />
           </li>

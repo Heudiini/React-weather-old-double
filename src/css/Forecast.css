@@ -1,5 +1,9 @@
 .container {
   min-height: 500px;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid aqua;
+  padding: 10px;
 }
 
 .container ul {
@@ -11,4 +15,15 @@
 }
 form {
   padding: 10px;
+}
+.searchBox {
+  border-style: none;
+  box-shadow: 3px 3px 3px 0px rgb(26, 27, 35);
+  border-radius: 2px;
+}
+.btnSubmit {
+  border-style: none;
+  box-shadow: 3px 3px 3px 0px rgb(26, 27, 35);
+  border-radius: 2px;
+  background-color: rgb(176, 212, 244);
 }
