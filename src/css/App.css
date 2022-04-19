@@ -11,15 +11,7 @@
 
 body {
   padding: 5%;
-  background: radial-gradient(
-    circle at -8.9% 51.2%,
-    rgb(9, 9, 9) 20%,
-    rgb(0, 183, 255) 15.9%,
-    rgb(77, 136, 255) 15.9%,
-    rgb(248, 188, 68) 24.4%,
-    rgb(57, 83, 99) 24.5%,
-    rgb(4, 7, 9) 66%
-  );
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
 }
 
 .titleh1 {

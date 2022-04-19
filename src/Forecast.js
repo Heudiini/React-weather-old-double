@@ -47,7 +47,7 @@ export default function SearchEngine() {
 
   if (result) {
     return (
-      <div className="container">
+      <div className="forecast ">
         {form}
 
         <h3>

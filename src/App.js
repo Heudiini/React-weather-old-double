@@ -14,8 +14,8 @@ export default function App() {
         <Title />
 
         <Forecast />
-        <Footer />
-      </div>
+      </div>{" "}
+      <Footer />
     </div>
   );
 }
