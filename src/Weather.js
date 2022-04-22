@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./css/Weather.css";
+import Icon from "./Icon";
 
 export default function SearchEngine() {
   const [city, setCity] = useState("");
@@ -21,7 +22,7 @@ export default function SearchEngine() {
       humidity: response.data.main.humidity,
       sunrise: response.data.sunrise,
       coord: response.data.coord,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
 
       description: response.data.weather[0].description,
     });
@@ -48,21 +49,29 @@ export default function SearchEngine() {
 
   if (result) {
     return (
-      <div className="forecast ">
+      <div className=" ">
         {form}
-
         <h3 className="text-capitalize">
+          {" "}
           {weatherData.city}, {weatherData.country}{" "}
         </h3>
-        <ul>
-          <li>Temperature: {Math.round(weatherData.temperature)}°C</li>
-          <li>Description: {weatherData.description}</li>
-          <li>Humidity: {weatherData.humidity}%</li>
-          <li>Wind: {Math.round(weatherData.wind)}km/h</li>
-          <li className="text-capitalize ">
-            <img src={weatherData.icon} alt={weatherData.description} />
-          </li>
-        </ul>
+        <div className="row sm-12">
+          <div className="col sm-4">
+            {" "}
+            <div className="TodayIcon ">
+              <Icon icon={weatherData.icon} />
+            </div>
+          </div>
+
+          <div className="col sm-4 data">
+            <ul>
+              <li>Temperature: {Math.round(weatherData.temperature)}°C</li>
+              <li>Description: {weatherData.description}</li>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind: {Math.round(weatherData.wind)}km/h</li>
+            </ul>
+          </div>
+        </div>{" "}
       </div>
     );
   } else {

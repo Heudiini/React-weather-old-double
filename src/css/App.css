@@ -1,7 +1,7 @@
 .App {
   margin: auto;
   color: #61dafb;
-  max-width: 40rem;
+  max-width: 35rem;
 }
 
 body {
@@ -55,7 +55,7 @@ body {
 }
 
 .logo {
-  height: 50px;
+  height: 30px;
   pointer-events: none;
 }
 @keyframes logo-spin {
