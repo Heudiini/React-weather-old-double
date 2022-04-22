@@ -8,7 +8,8 @@ export default function Footer() {
       <footer className="footer">
         <small>
           {" "}
-          App made with <img className="logo" src={logo} alt="Logo" /> React by{" "}
+          App made with <img className="logo" src={logo} alt="Logo" />
+          by{" "}
           <a href="https://heudiinis.netlify.app/" target="_blank" rel="noreferrer">
             {" "}
             Heudiini{" "}

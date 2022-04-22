@@ -20,6 +20,7 @@ export default function SearchEngine() {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
+      temp_min: response.data.main.temp_min,
       sunrise: response.data.sunrise,
       coord: response.data.coord,
       icon: response.data.weather[0].icon,
@@ -53,8 +54,9 @@ export default function SearchEngine() {
         {form}
         <h3 className="text-capitalize">
           {" "}
-          {weatherData.city}, {weatherData.country}{" "}
+          {weatherData.city}, {weatherData.country}
         </h3>
+        <h3>{Math.round(weatherData.temperature)}°C</h3>
         <div className="row sm-12">
           <div className="col sm-4">
             {" "}
@@ -65,7 +67,8 @@ export default function SearchEngine() {
 
           <div className="col sm-4 data">
             <ul>
-              <li>Temperature: {Math.round(weatherData.temperature)}°C</li>
+              <li>Temp.min: {weatherData.temp_min}°C</li>
+              <li>Temp.min: {weatherData.temp_min}</li>
               <li>Description: {weatherData.description}</li>
               <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {Math.round(weatherData.wind)}km/h</li>
