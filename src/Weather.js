@@ -1,83 +1,67 @@
 import React, { useState } from "react";
+import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./css/Weather.css";
-import Icon from "./Icon";
-import showWeatherTemperature from "./showWeatherTemperature";
 
-export default function SearchEngine() {
-  const [city, setCity] = useState("");
-  const [result, setResult] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
-  function showTemp(response) {
-    console.log(response.data);
-    setResult(true);
-
+  function handleResponse(response) {
     setWeatherData({
-      city: response.data.name,
-      country: response.data.sys.country,
-      weather: response.data,
-      visibility: response.data.main.visibility,
+      ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
-      wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      temp_min: response.data.main.temp_min,
-      sunrise: response.data.sunrise,
-      coord: response.data.coord,
-      icon: response.data.weather[0].icon,
-
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      wind: response.data.wind.speed,
+      city: response.data.name,
     });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    const apiKey = `cf35cd803ef0202f5f034abcff722764`;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(showTemp);
-    console.log(url);
+    search();
   }
 
-  function changeCity(event) {
+  function handleCityChange(event) {
     setCity(event.target.value);
-    //console.log(event.target.value)
   }
-  let form = (
-    <form onSubmit={handleSubmit}>
-      <input type="search" placeholder="Type a city" onChange={changeCity} className="searchBox" />
-      <input type="submit" value="🔍" autoFocus="on" className="btnSubmit" />
-    </form>
-  );
 
-  if (result) {
+  function search() {
+    const apiKey = "cf35cd803ef0202f5f034abcff722764";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  if (weatherData.ready) {
     return (
-      <div className=" ">
-        {form}
-        <h3 className="text-capitalize">
-          {" "}
-          {weatherData.city}, {weatherData.country}
-        </h3>
-        <div className="row sm-12">
-          <div className="col sm-4">
-            {" "}
-            <div className="TodayIcon ">
-              <Icon icon={weatherData.icon} />
+      <div className="Weather">
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-5">
+              <input
+                type="seach"
+                placeholder="Enter a city.."
+                className="form-control"
+                autoFocus="on"
+                onChange={handleCityChange}
+              />
+            </div>
+            <div className="col-5">
+              <input type="submit" value="Search" className="btn btn-primary w-80" />
             </div>
           </div>
-          <showWeatherTemperature celsius={weatherData.temperature} />
-          <div className="col sm-4 data">
-            <ul>
-              <li>Min: {Math.round(weatherData.temp_min)}°C</li>
-
-              <li className="description"> {weatherData.description}</li>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {Math.round(weatherData.wind)}km/h</li>
-            </ul>
-          </div>
-        </div>{" "}
+        </form>
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
-    return form;
+    search();
+    return "Loading...";
   }
 }

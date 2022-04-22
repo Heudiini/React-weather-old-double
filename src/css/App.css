@@ -1,11 +1,11 @@
 .App {
-  margin: auto;
+  margin: 0 auto;
   color: #61dafb;
-  max-width: 35rem;
+  max-width: 40rem;
+  text-align: center;
 }
 
 body {
-  padding: 5%;
   background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
 }
 
@@ -41,6 +41,7 @@ body {
 .footer {
   text-align: center;
   margin-bottom: 5px;
+  margin-top: 50px;
 }
 .footer a {
   color: rgb(117, 221, 247);

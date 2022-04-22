@@ -1,46 +1,68 @@
-.container {
-  min-height: 450px;
-  text-align: center;
-  border-radius: 15px;
-  border: 2px solid aqua;
-  padding: 0px;
-  align-items: center;
-  gap: 0;
+.Weather {
+  font-family: monospace;
+  border: 1px solid #dadde1;
+  padding: 16px;
+  border-radius: 4px;
+  color: rgb(84, 242, 250);
 }
 
-.container ul {
+.Weather h1 {
+  font-size: 24px;
+  font-weight: 100;
+  margin: 20px 0 0 0;
+  line-height: 29px;
+}
+
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather li {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
   list-style: none;
+}
+
+.Weather .temperature {
+  font-weight: bold;
+  color: #96f2de;
+  font-size: 64px;
+
+  line-height: 64px;
   margin-top: 20px;
+  font-weight: 400;
 }
-.container li {
-  margin-top: 10px;
-}
-.container .TodayIcon {
-  margin-top: 10px;
-  margin-left: 20px;
+.details {
+  padding: 20px 10px 40px 15px;
+  font-size: small;
+  text-align: center;
+  font-style: italic;
 }
 
-form {
-  padding: 10px;
+.Weather canvas {
+  margin: 10px auto;
 }
-.data {
-  /* today weather data */
-  padding-right: 20px;
-  text-align: left;
-}
-.searchBox {
-  border-style: none;
-  box-shadow: 3px 3px 3px 0px rgb(26, 27, 35);
-  border-radius: 2px;
-}
-.btnSubmit {
-  border-style: none;
-  box-shadow: 3px 3px 3px 0px rgb(26, 27, 35);
-  border-radius: 2px;
-  background-color: rgb(176, 212, 244);
-}
-.description {
-  text-transform: capitalize;
 
-  font-size: larger;
+.Weather .unit {
+  color: rgb(70, 232, 241);
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -10px;
+}
+.WeatherForecast {
+  text-align: center;
+}
+.TheCity {
+  font-family: caveat;
+  font-size: 3rem;
+  color: hotpink;
+}
+
+.WeatherForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
 }
