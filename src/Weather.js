@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./css/Weather.css";
 import Icon from "./Icon";
+import showWeatherTemperature from "./showWeatherTemperature";
 
 export default function SearchEngine() {
   const [city, setCity] = useState("");
@@ -56,7 +57,6 @@ export default function SearchEngine() {
           {" "}
           {weatherData.city}, {weatherData.country}
         </h3>
-        <h3>{Math.round(weatherData.temperature)}°C</h3>
         <div className="row sm-12">
           <div className="col sm-4">
             {" "}
@@ -64,12 +64,12 @@ export default function SearchEngine() {
               <Icon icon={weatherData.icon} />
             </div>
           </div>
-
+          <showWeatherTemperature celsius={weatherData.temperature} />
           <div className="col sm-4 data">
             <ul>
-              <li>Temp.min: {weatherData.temp_min}°C</li>
-              <li>Temp.min: {weatherData.temp_min}</li>
-              <li>Description: {weatherData.description}</li>
+              <li>Min: {Math.round(weatherData.temp_min)}°C</li>
+
+              <li className="description"> {weatherData.description}</li>
               <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {Math.round(weatherData.wind)}km/h</li>
             </ul>
