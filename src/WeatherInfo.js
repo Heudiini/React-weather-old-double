@@ -1,10 +1,10 @@
 ////////////////////////
 import React from "react";
-import FormattedDate from "./FormattedDate";
+import ShowTime from "./ShowTime";
 import Icon from "./Icon";
 import "./css/Weather.css";
-
-import WeatherTemperature from "./WeatherTemperature";
+import Converted from "./Converted";
+//import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -12,8 +12,8 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="TheCity col-6">{props.data.city}</div>
 
-        <div className=" col-6 text-capitalize">
-          {props.data.description} <FormattedDate date={props.data.date} />
+        <div className=" title_details col-6 text-capitalize">
+          {props.data.description} <ShowTime date={props.data.date} />
         </div>
       </div>
 
@@ -26,7 +26,7 @@ export default function WeatherInfo(props) {
           </div>
         </div>
         <div className=" col ">
-          <WeatherTemperature celsius={props.data.temperature} />
+          <Converted celsius={props.data.temperature} />
         </div>
 
         <div className="col details">

@@ -27,10 +27,9 @@
 
 .Weather .temperature {
   font-weight: bold;
-  color: #96f2de;
-  font-size: 64px;
+  color: #a9f5e6;
+  font-size: 40px;
 
-  line-height: 64px;
   margin-top: 20px;
   font-weight: 400;
 }
@@ -40,9 +39,14 @@
   text-align: center;
   font-style: italic;
 }
+.title_details {
+  line-height: 15px;
+  padding-top: 25px;
+  padding-left: 15px;
+}
 
 .Weather canvas {
-  margin: 10px auto;
+  margin: 0px auto;
 }
 
 .Weather .unit {
@@ -58,11 +62,21 @@
 }
 .TheCity {
   font-family: caveat;
-  font-size: 3rem;
-  color: hotpink;
+  font-weight: 700;
+  font-size: xx-large;
+  color: rgb(251, 246, 248);
+  padding-top: 20px;
 }
 
 .WeatherForecast-temperature-min {
   opacity: 0.6;
   margin-left: 5px;
+}
+.WeatherForecast-day {
+  font-family: caveat;
+  color: darkkhaki;
+  margin: 5px;
+}
+.WeatherForecast-temperatures {
+  margin-bottom: 20px;
 }
