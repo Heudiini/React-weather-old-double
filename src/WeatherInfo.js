@@ -25,7 +25,7 @@ export default function WeatherInfo(props) {
             </div>
           </div>
         </div>
-        <div className=" col ">
+        <div className=" col-sm ">
           <Converted celsius={props.data.temperature} />
         </div>
 

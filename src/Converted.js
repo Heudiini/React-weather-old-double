@@ -18,13 +18,12 @@ export default function Converted(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="converted WeatherTemperature">
+      <div className="converted ">
         <span className="temperature">{Math.round(props.celsius)}</span>
         <span className="unit">
           {" "}
-          °C |{" "}
+          °C|
           <a href="/" onClick={showFahrenheit}>
-            {" "}
             °F
           </a>
         </span>
@@ -35,11 +34,11 @@ export default function Converted(props) {
       <div className="converted WeatherTemperature">
         <span className="temperature">{Math.round(fahrenheit())}</span>
         <span className="unit">
+          {" "}
           <a href="/" onClick={showCelsius}>
-            {" "}
-            °C{" "}
-          </a>{" "}
-          | °F
+            °F
+          </a>
+          |°F
         </span>
       </div>
     );

@@ -27,22 +27,24 @@
 
 .Weather .temperature {
   font-weight: bold;
-  color: #a9f5e6;
+  color: #f7f6f4;
   font-size: 40px;
 
   margin-top: 20px;
-  font-weight: 400;
+  font-weight: 300;
 }
 .details {
   padding: 20px 10px 40px 15px;
   font-size: small;
-  text-align: center;
+  text-align: left;
   font-style: italic;
 }
 .title_details {
+  color: #f8fbfd;
   line-height: 15px;
   padding-top: 25px;
   padding-left: 15px;
+  padding-bottom: 40px;
 }
 
 .Weather canvas {
@@ -51,11 +53,7 @@
 
 .Weather .unit {
   color: rgb(70, 232, 241);
-  font-size: 20px;
-  font-weight: 400;
-  position: relative;
-  line-height: 1;
-  top: -10px;
+  font-size: 15px;
 }
 .WeatherForecast {
   text-align: center;
