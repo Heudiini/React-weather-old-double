@@ -14,7 +14,7 @@ export default function Footer() {
             {" "}
             Heudiini{" "}
           </a>
-          <a href="https://github.com/Heudiini/React-weather" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Heudiini/React-Weather-app" target="_blank" rel="noreferrer">
             opensource code
           </a>
         </small>
