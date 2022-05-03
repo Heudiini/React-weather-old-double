@@ -1,12 +1,12 @@
 .App {
   margin: 0 auto;
-  color: #61dafb;
+  color: black;
   max-width: 40rem;
   text-align: center;
 }
 
 body {
-  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  background: whitesmoke;
 }
 
 .titleh1 {
@@ -18,7 +18,7 @@ body {
   padding: 20px 20px 30px 20px;
 
   font-size: 3rem;
-  color: #e8b755;
+  color: #5c574d;
   /*text-decoration: underline 3px rgb(90, 89, 89);*/
 }
 /*
@@ -44,7 +44,7 @@ body {
   margin-top: 50px;
 }
 .footer a {
-  color: rgb(117, 221, 247);
+  color: grey;
   text-decoration: none;
 }
 .footer a:hover {
@@ -52,7 +52,7 @@ body {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #373a3a;
 }
 
 .logo {
