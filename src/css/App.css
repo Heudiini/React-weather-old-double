@@ -3,10 +3,11 @@
   color: black;
   max-width: 40rem;
   text-align: center;
+  padding: 10px;
 }
 
 body {
-  background: whitesmoke;
+  background: rgb(216, 215, 215);
 }
 
 .titleh1 {

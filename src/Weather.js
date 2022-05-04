@@ -99,8 +99,6 @@ export default function Weather(props) {
           <div className="row">
             <div>
               <TodayInfo data={weatherData} />
-
-              <p className="opinions">{weatherOpinions[weatherData.weatherSituation]}</p>
               <div
                 className=" containerApp"
                 style={{
@@ -108,13 +106,10 @@ export default function Weather(props) {
                 }}
               >
                 <div className="  giphyDiv">
-                  <iframe
-                    src="https://giphy.com/embed/SwNG0NVmA1AtO"
-                    className="giphy-embed"
-                    allowFullScreen
-                  ></iframe>
+                  <iframe className="giphy"></iframe>
                 </div>
-              </div>
+              </div>{" "}
+              <p className="opinions">{weatherOpinions[weatherData.weatherSituation]}</p>
             </div>
           </div>
         </div>

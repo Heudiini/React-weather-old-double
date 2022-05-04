@@ -18,7 +18,9 @@ export default function Footer() {
             opensource code
           </a>
           <p>
-            <a href="https://giphy.com/gifs/animation-animated-free-gZEBpuOkPuydi">via GIPHY</a>
+            <a href="https://giphy.com/gifs/animation-animated-free-gZEBpuOkPuydi">
+              Gifs from GIPHY
+            </a>
           </p>
         </small>
       </footer>
