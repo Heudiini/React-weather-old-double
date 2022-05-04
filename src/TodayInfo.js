@@ -8,17 +8,17 @@ import Converted from "./Converted";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
-      <div>
-        <div className="TheCity col">{props.data.city}</div>
+    <div className=" row WeatherInfo">
+      <div className="row">
+        <div className="TheCity col sm-6">{props.data.city}</div>
 
         <div className=" title_details col text-capitalize">
           {props.data.description} <ShowTime date={props.data.date} />
         </div>
       </div>
 
-      <div>
-        <div className="col">
+      <div className="row">
+        <div className="col sm-6">
           <div className="clearfix">
             <div className="TodayIcon">
               <Icon code={props.data.icon} size={60} />
