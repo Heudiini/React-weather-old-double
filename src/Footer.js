@@ -17,6 +17,9 @@ export default function Footer() {
           <a href="https://github.com/Heudiini/React-Weather-app" target="_blank" rel="noreferrer">
             opensource code
           </a>
+          <p>
+            <a href="https://giphy.com/gifs/animation-animated-free-gZEBpuOkPuydi">via GIPHY</a>
+          </p>
         </small>
       </footer>
     </div>
