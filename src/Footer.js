@@ -6,23 +6,17 @@ export default function Footer() {
   return (
     <div>
       <footer className="footer">
-        <small>
+        {" "}
+        © 2022 made with <img className="logo" src={logo} alt="Logo" />
+        by{" "}
+        <a href="https://heudiinis.netlify.app/" target="_blank" rel="noreferrer">
           {" "}
-          App made with <img className="logo" src={logo} alt="Logo" />
-          by{" "}
-          <a href="https://heudiinis.netlify.app/" target="_blank" rel="noreferrer">
-            {" "}
-            Heudiini{" "}
-          </a>
-          <a href="https://github.com/Heudiini/React-Weather-app" target="_blank" rel="noreferrer">
-            opensource code
-          </a>
-          <p>
-            <a href="https://giphy.com/gifs/animation-animated-free-gZEBpuOkPuydi">
-              Gifs from GIPHY
-            </a>
-          </p>
-        </small>
+          Heudiini{" "}
+        </a>
+        <a href="https://github.com/Heudiini/React-Weather" target="_blank" rel="noreferrer">
+          opensource code in Heudiini github{" "}
+        </a>
+        <a href="https://giphy.com/gifs/animation-animated-free-gZEBpuOkPuydi">Gifs from GIPHY </a>
       </footer>
     </div>
   );

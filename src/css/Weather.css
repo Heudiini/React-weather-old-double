@@ -2,7 +2,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 30px;
   border-radius: 4px;
   color: grey;
   border-radius: 15px;
@@ -20,22 +20,25 @@
 }
 
 .Weather li {
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
+  font-size: 15px;
+  text-align: left;
+
+  line-height: 22px;
   list-style: none;
 }
 .opinions {
-  font-size: large;
+  font-size: x-large;
   font-family: caveat;
+  color: rgb(251, 233, 241);
+  background-color: rgb(68, 67, 67);
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
 }
 .giphyDiv {
-  width: 300px;
-
-  height: 0;
-
-  padding-bottom: 50%;
+  padding-bottom: 0;
   margin-bottom: 30px;
+  min-height: 200px;
+  position: relative;
 }
 .giphy-embed {
   width: 100%;
@@ -62,13 +65,14 @@ form .fa-search {
   margin-top: 20px;
   padding-top: 20px;
   padding-left: 20px;
-  background-color: rgb(242, 239, 239);
+  background-color: rgb(245, 233, 233);
+  border-radius: 15px;
+  border: 3px solid grey;
 }
 .details {
   padding: 20px 10px 40px 15px;
-  font-size: small;
+  color: #7f858b;
   text-align: center;
-  font-style: italic;
 }
 .title_details {
   color: #7f858b;
@@ -83,12 +87,14 @@ form .fa-search {
 .Weather .unit {
   color: black;
   font-size: 15px;
+  padding: 5px;
 }
 
 .TheCity {
   font-family: caveat;
-  font-weight: 900;
-  font-size: xx-large;
+  line-height: 45px;
+  font-size: 2.5rem;
+
   color: rgb(9, 9, 9);
 
   padding-top: 20px;
