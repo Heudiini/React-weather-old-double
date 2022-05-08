@@ -15,19 +15,19 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   const weatherOpinions = {
-    Clear: "It's a gread day to spend time outside!",
+    Clear: "Wow, blue skies! Let's go out!",
     Clouds: "It's a gread day to spend time outside! ..or at least good enough don't you agree?",
-    Mist: "Mist, mysterious mist..",
-    Smoke: "If you want you can have a walk? Also it's not obligation",
+    Mist: "Mist, in mysterious mist we go out.. ",
+    Smoke: "Smoke in the air, not obligation to go out",
     Haze: "Contrasts are best when It's a bit blurry? or was it opposite...",
     Dust: "Openweather data says it's dusty, you see any dust?",
-    Fog: " fog, you could imagine yourself in London, unless you're already there ....",
+    Fog: " Fog, you could imagine yourself in London, unless you're already there ....",
     Sand: "Opendata informs about Sand? Is it even safe to go outside?",
     Ash: "It's Ashy weather according opendata weather... well..",
     Squal: "It's Squaly weather? What does that even mean? ",
     Tornado: "Tornado, why would you even ask if you should go outside. ",
     Snow: "Imagine if you were in Lapland, unless you are, envy you.",
-    Rain: " Even snowing would be better, who likes rain.. ",
+    Rain: " Even snow would be better, who likes rain.. ",
     Drizzle: "This is way more serious than normal rain..",
     Thunderstorm: "Just lets agree to stay inside ok ?",
   };

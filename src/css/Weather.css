@@ -80,10 +80,6 @@ form .fa-search {
   margin-bottom: 50px;
 }
 
-.Weather canvas {
-  margin: 0 auto;
-}
-
 .Weather .unit {
   color: black;
   font-size: 15px;
