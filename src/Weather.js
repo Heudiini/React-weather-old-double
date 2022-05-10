@@ -16,33 +16,35 @@ export default function Weather(props) {
 
   const weatherOpinions = {
     Clear: "Wow, blue skies! Let's go out!",
-    Clouds: "It's a gread day to spend time outside! ..or at least good enough don't you agree?",
+    Clouds:
+      "Few clouds, It's a gread day to spend time outside! ..or at least good enough don't you agree?",
     Mist: "Mist, in mysterious mist we go out.. ",
     Smoke: "Smoke in the air, not obligation to go out",
     Haze: "Contrasts are best when It's a bit blurry? or was it opposite...",
-    Dust: "Openweather data says it's dusty, you see any dust?",
+    Dust: "Openweather data says it's dusty, did you see any dust, or we stay inside?",
     Fog: " Fog, you could imagine yourself in London, unless you're already there ....",
     Sand: "Opendata informs about Sand? Is it even safe to go outside?",
     Ash: "It's Ashy weather according opendata weather... well..",
     Squal: "It's Squaly weather? What does that even mean? ",
-    Tornado: "Tornado, why would you even ask if you should go outside. ",
-    Snow: "Imagine if you were in Lapland, unless you are, envy you.",
+    Tornado:
+      "Tornado, why would you even ask if you should go outside. I can't see the tornado tho.. ",
+    Snow: "Imagine if you were in Lapland with all other reindeers..",
     Rain: " Even snow would be better, who likes rain.. ",
     Drizzle: "This is way more serious than normal rain..",
-    Thunderstorm: "Just lets agree to stay inside ok ?",
+    Thunderstorm: "Do I have to agree staying inside..  ?",
   };
 
   const imageMapping = {
     Clear: clearImage,
     Clouds: Clouds,
     Mist: outsideDay,
-    Smoke: Clouds,
-    Haze: Clouds,
+    Smoke: outsideDay,
+    Haze: outsideDay,
     Dust: rainImage,
     Fog: rainImage,
     Sand: rainImage,
     Ash: rainImage,
-    Squal: rainImage,
+    Squal: thundergif,
     Tornado: thundergif,
     Snow: snowImage,
     Rain: rainImage,
