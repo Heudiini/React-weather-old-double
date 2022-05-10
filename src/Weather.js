@@ -102,6 +102,7 @@ export default function Weather(props) {
               <div
                 className=" containerApp"
                 style={{
+                  backgroundSize: "cover",
                   backgroundImage: `url(${imageMapping[weatherData.weatherSituation]})`,
                 }}
               >
