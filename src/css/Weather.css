@@ -7,6 +7,25 @@
   color: grey;
   border-radius: 15px;
 }
+.searchBtn {
+  font-family: monospace;
+  box-shadow: 0 10px 10px rgb(0 0 0 /20%);
+
+  padding: 7px;
+  background-color: rgb(80, 80, 80);
+  border-style: none;
+  margin: 5px auto;
+  border-radius: 5px;
+  font-size: normal;
+  transition: 0.5s ease-in-out;
+  color: rgb(250, 247, 247);
+}
+.searchBtn:hover {
+  background-color: rgb(168, 222, 249);
+  color: black;
+  border-radius: 10px;
+}
+
 .Weather h1 {
   font-size: 50px;
   font-weight: 100;

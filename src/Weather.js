@@ -87,15 +87,18 @@ export default function Weather(props) {
     return (
       <div className=" row  Weather">
         {" "}
-        <form onSubmit={handleSubmit} className="form-inline">
+        <form onSubmit={handleSubmit} className="row form-inline">
           <input
             className="form-control form-control-sm  w-50"
             type="text"
             placeholder="Your Town?"
-            autoFocus="on"
+            autoFocus={false}
             onChange={handleCityChange}
             aria-label="Search"
           />
+          <span className="col ">
+            <input type="submit" value="Search" className="searchBtn" />
+          </span>
         </form>
         <div className="col-lg-8 ">
           <div className="row">
