@@ -65,7 +65,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
     });
-    console.log(weatherData.weatherSituation);
+    console.log(weatherData);
   }
 
   function handleSubmit(event) {
@@ -108,14 +108,21 @@ export default function Weather(props) {
                 className=" containerApp"
                 style={{
                   backgroundSize: "cover",
-                  backgroundImage: `url(${imageMapping[weatherData.weatherSituation]})`,
+                  backgroundImage: `url(${
+                    imageMapping[weatherData.weatherSituation]
+                  })`,
                 }}
               >
                 <div className="  giphyDiv">
-                  <iframe className="giphy"></iframe>
+                  <iframe
+                    title="Embedded gif of weather"
+                    className="giphy"
+                  ></iframe>
                 </div>
               </div>{" "}
-              <p className="opinions">{weatherOpinions[weatherData.weatherSituation]}</p>
+              <p className="opinions">
+                {weatherOpinions[weatherData.weatherSituation]}
+              </p>
             </div>
           </div>
         </div>
